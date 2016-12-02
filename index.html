@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn to code by doing...</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.teal-yellow.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <!-- I haven't used all MDL classes for the navbar because it has a weird effect on small screens
+    So I have created new custom ones, and I will take care of the responsivness -->
+    <!-- main navbar -->
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header navbar">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+            <a class="mdl-layout-title logo" href="">Learn to code</a>
+            <nav class="mdl-navigation main-nav">
+                <a class="mdl-navigation__link" href="">Journeys</a>
+                <a class="mdl-navigation__link" href="">Courses</a>
+                <a class="mdl-navigation__link" href="">Talents</a>
+
+            </nav>
+              <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+              <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation login-signup-nav">
+                <a class="mdl-navigation__link" href="">Sign up</a>
+                <a class="mdl-navigation__link login-toggle" href="">Login</a>
+
+            </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Navigation</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Journeys</a>
+            <a class="mdl-navigation__link" href="">Courses</a>
+            <a class="mdl-navigation__link" href="">Talents</a>
+            <a class="mdl-navigation__link" href="">Sign up</a>
+            <a class="mdl-navigation__link" href="">Login</a>
+        </nav>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

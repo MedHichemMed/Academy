@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #e6e6e6;
+}
+/* navbar */
+.navbar{
+    background-color: #223843;
+    a{
+        color: #f5f7f7;
+        text-decoration: none;
+    }
+    .logo{
+        margin-right: 50px;
+    }
+    .mdl-navigation{
+        a{
+            &:hover,
+            &:focus{
+                background-color: rgba(0,0,0,.2);
+            }
+        }
+        .login-toggle{
+            background-color: rgba(0,0,0,.2);
+            &:hover,
+            &:focus{
+                background-color: rgba(0,0,0,.2);
+            }
+
+        }
+    }
+}
+
+/* Hide the menu burger on large screens
+*/
+.mdl-layout__drawer-button{
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+@media screen and (max-width: 700px){
+    /* Show the menu burger on small screens */
+    .mdl-layout__drawer-button{
+        opacity: 1;
+        visibility: visible;
+    }
+    /* hide the main nav on tablet screens */
+    .main-nav{
+        display: none;
+
+    }
+
+}
+@media screen and (max-width: 400px){
+    /* hide the login and sign up nav on mobile devices */
+    .login-signup-nav{
+        display: none;
+
+    }
+
+}
