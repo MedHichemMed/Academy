@@ -27,9 +27,9 @@ body{
 }
 /* navbar */
 .navbar{
-    background-color: #e6e6e6;
+    background-color: #09bc8a;
     a{
-        color: #223843;
+        color: #f5f7f7;
         text-decoration: none;
     }
     .logo{
@@ -38,7 +38,7 @@ body{
     .mdl-navigation{
         a{
             opacity: 0.8;
-            color: #223843;
+            color: #f5f7f7;
             &:hover,
             &:focus{
                 opacity: 1;
