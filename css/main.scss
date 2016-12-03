@@ -3,8 +3,9 @@ $border : 1px solid rgba(0,0,0,.1);
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    transition: all 0.3s;
+    transition: all 0.2s ease;
     font-family: 'Roboto', sans-serif;
+    line-height: 1.42;
 }
 h1 {
     font-size: 3.998em;
@@ -26,10 +27,9 @@ body{
 }
 /* navbar */
 .navbar{
-
-    background-color: #223843;
+    background-color: #e6e6e6;
     a{
-        color: #f5f7f7;
+        color: #223843;
         text-decoration: none;
     }
     .logo{
@@ -37,15 +37,17 @@ body{
     }
     .mdl-navigation{
         a{
-            opacity: 0.7;
+            opacity: 0.8;
+            color: #223843;
             &:hover,
             &:focus{
                 opacity: 1;
-                background-color: rgba(0,0,0,.2);
+                background-color: rgba(0,0,0,.1);
             }
         }
         .login-toggle{
-            background-color: rgba(0,0,0,.2);
+            opacity:1;
+            background-color: rgba(0,0,0,.1);
             &:hover,
             &:focus{
                 background-color: rgba(0,0,0,.2);
@@ -68,6 +70,7 @@ body{
     .mdl-layout__drawer-button{
         opacity: 1;
         visibility: visible;
+        color: #223843 !important;
     }
     /* hide the main nav on tablet screens */
     .main-nav{
@@ -85,17 +88,26 @@ body{
 
 }
 
-.intro{
-    padding: 200px 10px 0px 10px;
+#intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 50px 10px 0px 10px;
     text-align: center;
-    min-height: 450px;
-    background-image: linear-gradient(rgba(34, 56, 67, 0.8),rgba(230,230,230, 0.9)),url('../img/intro.jpg');
-    background-size:cover;
+    min-height: 600px;
+
+    background-image:url('../img/school.png');
     .intro-container{
+        color: #223843;
         .search-box{
-            background-color: #e6e6e6;
+            &:hover,
+            &:focus{
+                    box-shadow:rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+                }
+            background-color: rgba(255,255,255,0.9);
+            color: #223843;
             align-self: flex-end;
-            margin:30px auto 0px;
+            margin:30px auto 50px;
             box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 
             width: 80%;
@@ -119,6 +131,8 @@ body{
                 width: 80%;
                 padding: 0px;
                 /* get rid off the default effect of input field and add some custom css */
+
+
                 input{
 
                     &:focus{
@@ -154,6 +168,159 @@ body{
     }
 
 }
+/* show */
+#show{
+    background-color: #fff;
+    padding: 100px 50px 50px;
+    .course-container{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        .what-to-do{
+            transition: all 0.2s ease;
+            border-radius: 5px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        //    justify-content: flex-end;
+//            width: 31%;
+            margin-right: 2%;
+            padding: 20px;
+            opacity: 1;
+
+            background-color:#f5f7f7;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+            a{
+                position: absolute;
+                bottom: 20px;
+                width: 100px;
+                background-color:#048998;
+                color: #fff;
+                &:hover{
+
+                    background-color:#048998;
+                }
+            }
+            svg{
+
+                width: 50%;
+                margin: -20% auto 0;
+                display: block;
+                z-index: 100;
+            }
+            .to-do-desc{
+                text-align: justify;
+                margin-bottom: 20px;
+                h3{
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    padding: 5px 0px;
+                    line-height: 1.42;
+                }
+                p{
+                    margin-bottom: 40px;
+                }
+
+            }
+        }
+        .what-to-do:nth-child(3){
+            margin-right: 0%;
+        }
+
+        .what-to-do:hover{
+            box-shadow:rgba(0, 0, 0, 0.3) 0 16px 16px 0;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1150px){
+}
+
+@media screen and (max-width: 850px){
+    #show {
+        .course-container{
+            padding: 10px;
+            flex-direction: column;
+            margin: auto;
+            .what-to-do{
+                width: 100%;
+                margin: 0 2% 80px 2%;
+                flex-direction: row;
+                padding: 0px;
+                .to-do-img{
+                    width: 150px;
+                    svg{
+
+                    width: 100%;
+                    margin: -20% 0 0 -30%;
+
+                    z-index: 100;
+                    }
+                }
+                .to-do-desc{
+
+                    padding: 0px 10px 10px;
+                    width: 80%;
+
+
+
+                }
+            }
+        }
+
+    }
+}
+@media screen and (max-width: 700px){
+     #show {
+        padding: 50px 10px;
+        .course-container{
+            width: 80%;
+            .what-to-do{
+                flex-direction: column;
+                align-items: center;
+                .to-do-img{
+                    width: 200px;
+                    svg{
+                        margin: -20% auto 0;
+                        width: 80%;
+                        align-self: center;
+                    }
+                }
+                .to-do-desc{
+                    padding: 10px;
+                    width: 90%;
+                }
+            }
+        }
+
+    }
+}
+@media screen and (max-width: 400px){
+     #show {
+        .course-container{
+            width: 100%;
+            .what-to-do{
+                margin: 20px 0px 50px 0;
+                .to-do-desc{
+                    padding: 10px;
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
 
 
 
