@@ -24,6 +24,7 @@ small, .font_small {
     font-size: 0.707em;}
 body{
     background-color: #e6e6e6;
+    font-size: 0.9em;
 }
 /* navbar */
 .navbar{
@@ -167,8 +168,20 @@ body{
     }
 
 }
+.signup-form-wrapper:before,
+                .login-form-wrapper:before{
+                    content:"";
+                       border-bottom: 10px solid #fff;
+                       border-bottom: 10px solid #fff;
+                      border-right: 10px solid transparent;
+                      border-left: 10px solid transparent;
+                    position: absolute;
+                    top: -8px;
+                    right: 20px;
+                }
+
 /* show */
-#show{
+.show{
     background-color: #fff;
     padding: 100px 50px 50px;
     .course-container{
@@ -218,6 +231,7 @@ body{
                 }
                 p{
                     margin-bottom: 40px;
+                    color: #7b8b8e;
                 }
 
             }
@@ -243,7 +257,7 @@ body{
 }
 
 @media screen and (max-width: 850px){
-    #show {
+    .show{
         .course-container{
             padding: 10px;
             flex-direction: column;
@@ -277,7 +291,7 @@ body{
     }
 }
 @media screen and (max-width: 700px){
-     #show {
+    .show{
         padding: 50px 10px;
         .course-container{
             width: 80%;
@@ -300,9 +314,11 @@ body{
         }
 
     }
+
+
 }
-@media screen and (max-width: 400px){
-     #show {
+@media screen and (max-width: 450px){
+    .show{
         .course-container{
             width: 100%;
             .what-to-do{
@@ -315,10 +331,105 @@ body{
         }
 
     }
+    #intro{
+
+        .intro-container{
+
+            .search-box{
+                width: 100%;
+            }
+        }
+    }
 }
+.go-top{
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-color: #09bc8a;
+    color: #f5f7f7;
+    &:hover{
+        background-color: #09bc8a;
+    }
+}
+#journeys {
+    padding-top: 20px;
+    background-color:#f5f7f7;
+    .course-container{
+        h1{
+            font-size: 2.5em;
+            padding-bottom: 10px;
+            border-bottom: $border;
+            margin-bottom: 50px;
+        }
+        background-color: #f5f7f7;
+        flex-direction: column;
+        margin: auto;
+        width: 60%;
+        .what-to-do{
+            background-color: #fff;
+            width: 100%;
+            margin: 0 2% 80px 2%;
+            flex-direction: row;
 
+            .to-do-img{
+                width: 150px;
+                svg{
 
+                width: 100%;
+                margin: -40% 0 0 -30%;
+                }
+            }
+            .to-do-desc{
 
+                padding: 0px 10px 10px;
+                width: 80%;
+            }
+        }
+        .backend-journey{
+            width: 100%;
+            margin: 0 2% 80px 2%;
+            flex-direction: row-reverse;
+            .to-do-img{
+                width: 150px;
+                svg{
+                width: 100%;
+                margin: -35% 0 0 30%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 850px){
+    #journeys{
+        padding: 50px 10px;
+        .course-container{
+            width: 80%;
+            .what-to-do{
+                flex-direction: column;
+                align-items: center;
+                .to-do-img{
+                    width: 200px;
+                    svg{
+                        margin: -25% auto 0;
+                        width: 80%;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+@media screen and (max-width: 450px){
+    #journeys{
+        .course-container{
+            width: 100%;
+        }
+
+    }
+
+}
 
 
 
