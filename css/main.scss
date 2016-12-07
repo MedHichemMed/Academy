@@ -168,17 +168,7 @@ body{
     }
 
 }
-.signup-form-wrapper:before,
-                .login-form-wrapper:before{
-                    content:"";
-                       border-bottom: 10px solid #fff;
-                       border-bottom: 10px solid #fff;
-                      border-right: 10px solid transparent;
-                      border-left: 10px solid transparent;
-                    position: absolute;
-                    top: -8px;
-                    right: 20px;
-                }
+
 
 /* show */
 .show{
@@ -341,6 +331,102 @@ body{
         }
     }
 }
+
+#journeys{
+    background-color: #f5f7f7;
+    color: #223843;
+    padding: 100px 50px 50px;
+    .journeys-intro{
+        h3{
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+
+        }
+        h5{
+            color: #7b8b8e;
+            line-height: 1.8em;
+        }
+        width: 80%;
+        margin: 0px auto 20px;
+    }
+    .journey{
+        display: flex;
+        justify-content: space-around;
+        flex-grow: 1;
+        margin: 80px 0px;
+        .journey-desc{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h3{
+                line-height: 1.8em;
+                font-size: 1.5em;
+                margin: 0px;
+            }
+            p{
+                color: #7b8b8e;
+                font-size: 1.2em;
+                line-height: 1.8em;
+                margin-bottom: 30px;
+            }
+            .call-to-journey{
+                background-color: #223843;
+                color: #f5f7f7;
+                width: 200px;
+
+            }
+            width: 50%;
+            margin-right: 8%;
+        }
+        .journey-img{
+            width: 40%;
+            align-self: flex-end;
+            text-align: left;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+    .journey:nth-child(2n+1){
+        flex-direction: row-reverse;
+        .journey-desc{
+            margin-right: 0%;
+            margin-left: 8%;
+
+        }
+    }
+}
+@media screen and(max-width: 900px){
+    #journeys{
+        .journey:nth-child(n){
+            flex-direction: column-reverse;
+            .journey-desc{
+                width: 100%;
+                margin: 50px 0px;
+            }
+            .journey-img{
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px){
+    #journeys{
+        padding: 50px 10px;
+        .journeys-intro{
+            h3{
+                text-align: left;
+                font-size: 2.2em;
+            }
+            width: 90%;
+            margin: 0px auto 20px;
+        }
+    }
+
+
+}
 .go-top{
     position: fixed;
     bottom: 40px;
@@ -351,95 +437,3 @@ body{
         background-color: #09bc8a;
     }
 }
-#journeys {
-    padding-top: 20px;
-    background-color:#f5f7f7;
-    .course-container{
-        h1{
-            font-size: 2.5em;
-            padding-bottom: 10px;
-            border-bottom: $border;
-            margin-bottom: 50px;
-        }
-        background-color: #f5f7f7;
-        flex-direction: column;
-        margin: auto;
-        width: 60%;
-        .what-to-do{
-            background-color: #fff;
-            width: 100%;
-            margin: 0 2% 80px 2%;
-            flex-direction: row;
-
-            .to-do-img{
-                width: 150px;
-                svg{
-
-                width: 100%;
-                margin: -40% 0 0 -30%;
-                }
-            }
-            .to-do-desc{
-
-                padding: 0px 10px 10px;
-                width: 80%;
-            }
-        }
-        .backend-journey{
-            width: 100%;
-            margin: 0 2% 80px 2%;
-            flex-direction: row-reverse;
-            .to-do-img{
-                width: 150px;
-                svg{
-                width: 100%;
-                margin: -35% 0 0 30%;
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width: 850px){
-    #journeys{
-        padding: 50px 10px;
-        .course-container{
-            width: 80%;
-            .what-to-do{
-                flex-direction: column;
-                align-items: center;
-                .to-do-img{
-                    width: 200px;
-                    svg{
-                        margin: -25% auto 0;
-                        width: 80%;
-                        align-self: center;
-                    }
-                }
-            }
-        }
-
-    }
-
-}
-@media screen and (max-width: 450px){
-    #journeys{
-        .course-container{
-            width: 100%;
-        }
-
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
